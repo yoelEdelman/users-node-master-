@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title Page #{name}
+        meta(charset='utf-8')
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
+        link(rel='stylesheet', href='style.css')
+
+    body
+        include includes/nav
+
+
+
+    div.card(style={width: '50vw', margin: '50px auto'})
+        div.card-content
+            article(style={background: 'dodgerblue', color:'white', padding:'5px'})=user.name
+            article.p-2=user.email
+            article.p-2.text-right Is admin :
+                span.ml-2.btn.btn-primary=user.is_admin

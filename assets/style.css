@@ -1,0 +1,39 @@
+.userCo{
+    background-color: lightgray;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+
+.ulUsers{
+    width: 50vw;
+    margin: auto;
+    padding: 0;
+}
+
+
+.ulUsers li{
+    margin-top: 15px;
+   list-style: none;
+    box-shadow: 0px 0px 3px lightgray;
+    border-radius: 5px;
+}
+
+.isAdmin{
+    margin-left: 4px;
+    background-color: dodgerblue;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+}
+
+.nameUser{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid lightgray;
+    background-color: dodgerblue;
+    color: white;
+    padding: 3px;
+}

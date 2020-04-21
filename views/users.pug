@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title Page #{name}
+        meta(charset='utf-8')
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
+        link(rel='stylesheet', href='style.css')
+
+    body
+        include includes/nav
+
+
+
+    if userCo
+       div.card.p-2.w-50.mx-auto.mt-2
+        div.card-body.text-center Welcome
+            span.userCo=userCo.name
+
+
+    if userCo.is_admin
+        ul.ulUsers
+            article.mt-2 All users :
+            each val in users
+                li
+                    article.nameUser.d-flex.justify-content-between.align-items-center=val.name
+                        a.text-white(href=`/user/${val._id}`) Voir
+                    article.p-2=val.email
+                    article.p-2 Is admin :
+                        span.isAdmin=val.is_admin
+                    article.p-2.text-right
+                        form(method='POST' action=formAction)
+                            button.btn.btn-danger(type='submit') Delete
+
